@@ -1,0 +1,35 @@
+{
+  "name": "cordova-ngF7-container",
+  "version": "1.2.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freefri/cordova-ngF7-container.git"
+  },
+  "description": "A cordova container project using Framework7 and Angular JS",
+  "src_js_dir": "www/js",
+  "devDependencies": {
+    "angular-translate": "^2.13.0",
+    "cordova": "^6.4.0",
+    "framework7": "~1.5.0",
+    "framework7-sass": "git://github.com/freefri/framework7-sass.git#122d267dc9d7ff51ab8163b633e9306d7b19fe00",
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "^1.1.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-shell": "^2.1.0",
+    "grunt-version": "^1.1.1",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

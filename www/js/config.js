@@ -1,13 +1,15 @@
 /*jslint browser: true*/
-/*global console, MyApp, angular, Framework7*/
+/*global console, angular, Framework7*/
 
 // Init angular
-var MyApp = {};
+MyApp = {};
 
 MyApp.config = {
 };
 
-MyApp.angular = angular.module('MyApp', []);
+MyApp.angular = angular.module('MyApp', [
+  'pascalprecht.translate'
+]);
 
 MyApp.fw7 = {
   app : new Framework7({

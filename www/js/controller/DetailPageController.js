@@ -1,18 +1,20 @@
 /*jslint browser: true*/
 /*global console, MyApp*/
-
-MyApp.angular.controller('DetailPageController', ['$scope', '$http', 'InitService', function ($scope, $http, InitService) {
+MyApp.angular.controller('DetailPageController', function ($scope) {
   'use strict';
-  
-  InitService.addEventListener('ready', function () {
-    // DOM ready
-    console.log('DetailPageController: ok, DOM ready');
 
-    // You can access angular like this:
-    // MyApp.angular
-    
-    // And you can access Framework7 like this:
-    // MyApp.fw7.app
-  });
-  
-}]);
+  $scope.items = [
+    {
+      after: '24-10-2016 11:25',
+      title: 'First step'
+    },
+    {
+      after: '24-10-2016 11:40',
+      title: 'Second step'
+    },
+    {
+      after: '25-10-2016 12:40',
+      title: 'Third step'
+    }
+  ];
+});

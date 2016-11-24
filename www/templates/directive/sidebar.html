@@ -1,0 +1,56 @@
+<div class="panel panel-left panel-cover">
+    <!--<div class="content-block">-->
+    <div class="content-block-title">Menu</div>
+    <div class="list-block">
+        <ul>
+            <li>
+                <a href="#" class="search-link item-content list-panel-all close-panel item-link">
+                    <div class="item-inner">
+                        <div class="item-title">Search</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="favorites-link item-content list-panel-all close-panel item-link">
+                    <div class="item-inner">
+                        <div class="item-title">Favorites</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <form id="my-form" class="list-block">
+                <li class="item-divider" ng-bind="('AUTH.LOGIN'|translate)+':'"></li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="email" placeholder="{{ 'AUTH.EMAIL' | translate }}">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="password" placeholder="{{ 'AUTH.PASSWORD' | translate }}">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </form>
+        </ul>
+    </div>
+    <div class="content-block">
+        <div class="row">
+            <div class="col-50">
+                <a href="#" class="button active" translate="AUTH.LOGIN"></a>
+            </div>
+            <div class="col-50">
+                <a href="#" class="button active" translate="AUTH.SIGNUP"></a>
+            </div>
+        </div>
+        <a href="#" class="right" translate="AUTH.FORGOT_PASS"></a>
+    </div>
+</div>

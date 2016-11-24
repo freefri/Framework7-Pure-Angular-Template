@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 /*global console, Framework7, MyApp, $document*/
 
-MyApp.angular.factory('InitService', ['$document', function ($document) {
+MyApp.angular.factory('InitService', function ($document) {
   'use strict';
 
   var pub = {},
@@ -43,4 +43,4 @@ MyApp.angular.factory('InitService', ['$document', function ($document) {
 
   return pub;
   
-}]);
+});
