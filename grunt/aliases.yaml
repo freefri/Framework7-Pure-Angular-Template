@@ -1,4 +1,6 @@
 dev:
   - 'less:dev'
+  - 'js'
+js:
   - 'jshint'
   - 'concat'

@@ -8,7 +8,7 @@ MyApp.angular.factory('InitService', function ($document) {
     eventListeners = {
       'ready' : []
     };
-  
+
   pub.addEventListener = function (eventName, listener) {
     eventListeners[eventName].push(listener);
   };
@@ -23,23 +23,10 @@ MyApp.angular.factory('InitService', function ($document) {
       eventListeners.ready[i]();
     }
   }
-  
-  // Init
-  (function () {
-    $document.ready(function () {
 
-      if (document.URL.indexOf("http://") === -1 && document.URL.indexOf("https://") === -1) {
-        // Cordova
-        console.log("Using Cordova/PhoneGap setting");
-        document.addEventListener("deviceready", onReady, false);
-      } else {
-        // Web browser
-        console.log("Using web browser setting");
-        onReady();
-      }
-      
-    });
-  }());
+  pub.initFramework7 = function () {
+    onReady();
+  };
 
   return pub;
   

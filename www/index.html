@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html>
   <head>
 
     <meta charset="utf-8">
@@ -10,11 +10,10 @@
     <title>MyApp</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/f7.ios.css">
-    <link rel="stylesheet" href="css/f7.material.css">
-    <!--<link rel="stylesheet" href="css/f7.css">-->
+    <link rel="stylesheet" href="../tmp/f7.ios.css">
+    <link rel="stylesheet" href="../tmp/f7.material.css">
+    <!--<link rel="stylesheet" href="../tmp/f7.css">-->
 
-    <script type="text/javascript" src="../tmp/app.js"></script>
 
   </head>
   <body class="theme-green">
@@ -24,77 +23,10 @@
     <sidebar></sidebar>
 
     <div class="views">
-      <div class="view view-main">
-
-        <navbar-app></navbar-app>
-
-        <!-- Pages -->
-        <div class="pages navbar-through toolbar-through">
-
-          <!-- Page 1 -->
-          <div data-page="index" class="page" ng-controller="IndexPageController">
-            <!-- Page content-->
-            <div class="page-content">
-              <div class="content-block-title">Last transactions</div>
-
-              <div class="card">
-                <div class="card-header">Big candy</div>
-                <div class="card-content">
-                  <div class="card-content-inner">Card with header and footer. Card header is used to display card title and footer for some additional information or for custom actions.</div>
-                </div>
-                <div class="card-footer">
-                  <!--<a href="#" class="link">Like</a>-->
-                  <a href="#detailsPage" class="link">Read more</a>
-                </div>
-              </div>
-
-              <div class="list-block">
-                <ul>
-                  <li class="item-divider">Limit to:</li>
-                  <li>
-                    <label class="label-radio item-content">
-                      <input type="radio" name="filter" value="track">
-                      <div class="item-media">
-                        <i class="icon icon-form-radio"></i>
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title">Track name</div>
-                      </div>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-
-              <a href="#" class="floating-button color-pink">
-                <i class="icon icon-plus"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Page 2 -->
-          <div data-page="detailsPage" class="page cached" ng-controller="DetailPageController">
-            <div class="page-content">
-              <div class="list-block media-list">
-                <ul>
-                  <li ng-repeat="item in items">
-                    <a href="#" class="item-link item-content">
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title" ng-bind="item.title"></div>
-                          <div class="item-after" ng-bind="item.after"></div>
-                        </div>
-                        <div class="item-subtitle">New messages from John Doe</div>
-                        <div class="item-text">Lorem ipsum dolor sit amet...</div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <main-view></main-view>
     </div>
+
+  <script type="text/javascript" src="dist/init.js"></script>
+  <script type="text/javascript" src="../tmp/app.js"></script>
   </body>
 </html>

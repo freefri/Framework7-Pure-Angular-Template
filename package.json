@@ -9,10 +9,10 @@
   "description": "A cordova container project using Framework7 and Angular JS",
   "src_js_dir": "www/js",
   "devDependencies": {
+    "angular": "~1.5.9",
     "angular-translate": "^2.13.0",
     "cordova": "^6.4.0",
     "framework7": "~1.5.0",
-    "framework7-sass": "git://github.com/freefri/framework7-sass.git#122d267dc9d7ff51ab8163b633e9306d7b19fe00",
     "grunt": "^1.0.1",
     "grunt-angular-templates": "^1.1.0",
     "grunt-contrib-clean": "^1.0.0",

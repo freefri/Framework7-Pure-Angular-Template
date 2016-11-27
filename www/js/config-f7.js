@@ -1,16 +1,6 @@
 /*jslint browser: true*/
-/*global console, angular, Framework7*/
-
-// Init angular
-MyApp = {};
-
-MyApp.config = {
-};
-
-MyApp.angular = angular.module('MyApp', [
-  'pascalprecht.translate'
-]);
-
+/*jslint evil: true*/
+/*global console, Framework7*/
 MyApp.fw7 = {
   app : new Framework7({
     animateNavBackIcon: true
