@@ -17,6 +17,7 @@ module.exports = {
             'node_modules/framework7/dist/js/framework7.min.js',
             'node_modules/angular-translate/dist/angular-translate.min.js',
             '<%= pkg.src_js_dir %>/config-ng.js',
+            'tmp/templates.js',
             '<%= pkg.src_js_dir %>/config-lang.js',
             '<%= pkg.src_js_dir %>/service/*.js',
             '<%= pkg.src_js_dir %>/directive/*.js',

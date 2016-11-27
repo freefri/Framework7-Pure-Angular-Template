@@ -2,5 +2,6 @@ dev:
   - 'less:dev'
   - 'js'
 js:
+  - 'ngtemplates'
   - 'jshint'
   - 'concat'
