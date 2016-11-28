@@ -25,7 +25,7 @@ module.exports = {
             '<%= pkg.src_js_dir %>/bootstrap-ng.js',
             '<%= pkg.src_js_dir %>/config-f7.js'
         ],
-        dest: 'tmp/app.js',
+        dest: 'www/dist/app.js',
         nonull: true
     }
 };

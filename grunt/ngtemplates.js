@@ -9,6 +9,6 @@ module.exports = {
             'src/templates/controller/*',
             'src/templates/directive/*'
         ],
-        dest: 'tmp/templates.js'
+        dest: 'www/dist/templates.js'
     }
 };
