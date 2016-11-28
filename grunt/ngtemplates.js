@@ -6,8 +6,8 @@ module.exports = {
             }
         },
         src: [
-            'templates/controller/*',
-            'templates/directive/*'
+            'src/templates/controller/*',
+            'src/templates/directive/*'
         ],
         dest: 'tmp/templates.js'
     }

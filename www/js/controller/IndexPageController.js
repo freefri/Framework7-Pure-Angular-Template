@@ -4,7 +4,7 @@ MyApp.angular.directive('indexPageController', function () {
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: 'templates/controller/index.html',
+    templateUrl: 'src/templates/controller/index.html',
     controller: function ($scope) {
     }
   };

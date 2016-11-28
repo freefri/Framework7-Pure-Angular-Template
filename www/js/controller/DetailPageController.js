@@ -4,7 +4,7 @@ MyApp.angular.directive('detailPageController', function () {
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: 'templates/controller/details.html',
+    templateUrl: 'src/templates/controller/details.html',
     controller: function ($scope) {
       $scope.items = [
         {
