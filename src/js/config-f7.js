@@ -7,15 +7,7 @@ MyApp.config = {
 };
 
 MyApp.fw7 = {
-  app : new Framework7({
-    material: false,//!MyApp.config.isIos
-    template7Pages: false,
-    swipePanel: 'left',
-    swipePanelActiveArea: '30',
-    swipeBackPage: true,
-    pushState: false,
-    animateNavBackIcon: true
-  }),
+  app : null,
   options : {
     dynamicNavbar: true,
     domCache: true

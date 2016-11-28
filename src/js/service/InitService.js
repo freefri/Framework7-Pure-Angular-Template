@@ -17,6 +17,15 @@ MyApp.angular.factory('InitService', function ($document) {
     var fw7 = MyApp.fw7,
       i;
 
+    fw7.app = new Framework7({
+      material: false,//!MyApp.config.isIos
+      template7Pages: false,
+      swipePanel: 'left',
+      swipePanelActiveArea: '30',
+      swipeBackPage: true,
+      pushState: false,
+      animateNavBackIcon: true
+    });
     fw7.views.push(fw7.app.addView('.view-main', fw7.options));
     
     for (i = 0; i < eventListeners.ready.length; i = i + 1) {
