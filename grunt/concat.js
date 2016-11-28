@@ -9,7 +9,7 @@ module.exports = {
             'angular.js',
             '<%= pkg.src_js_dir %>/config-ng.js'
         ],
-        dest: '<%= pkg.src_js_dir %>/../dist/init.js',
+        dest: 'www/dist/init.js',
         nonull: true
     },
     app: {
