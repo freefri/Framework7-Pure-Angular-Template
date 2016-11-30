@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 /*global console, Framework7, MyApp, $document*/
 
-MyApp.angular.factory('InitService', function ($document) {
+MyApp.angular.factory('InitService', function (PushService) {
   'use strict';
 
   var pub = {},
@@ -14,6 +14,7 @@ MyApp.angular.factory('InitService', function ($document) {
   };
 
   function onReady() {
+    PushService.init();
     var fw7 = MyApp.fw7,
       i;
 
@@ -38,5 +39,5 @@ MyApp.angular.factory('InitService', function ($document) {
   };
 
   return pub;
-  
+
 });

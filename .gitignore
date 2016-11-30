@@ -1,4 +1,6 @@
 /www/dist
+/platforms
+/plugins
 /node_modules
 /tmp
 /.idea
