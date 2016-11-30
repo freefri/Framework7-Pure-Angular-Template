@@ -1,3 +1,5 @@
 MyApp.angular.constant('CFG', {
-    pushSenderId: '888333666999'
+    push: {
+        senderId: '888333666999'
+    }
 });
