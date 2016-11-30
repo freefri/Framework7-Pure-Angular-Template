@@ -24,4 +24,4 @@ Check it out here: http://www.timo-ernst.net/misc/f7-pure-angular-template-demo/
 
 ## Android App
 
-Download from here: https://raw.githubusercontent.com/freefri/cordova-ngF7-container/master/dist/android-debug.js
+Download from here: https://raw.githubusercontent.com/freefri/cordova-ngF7-container/master/dist/android-debug.apk
