@@ -43,7 +43,6 @@ MyApp.angular.factory('PushService', function ($rootScope, CFG) {
     if (typeof PushNotification === 'undefined') {
       console.log('PushNotification is undefined, waiting deviceready event');
       document.addEventListener('deviceready', function() {
-        console.log('deviceready');
         setupPush();
       });
     } else {
