@@ -36,6 +36,10 @@ MyApp.angular.factory('InitService', function (PushService) {
 
   pub.initFramework7 = function () {
     onReady();
+
+    if (navigator.splashscreen && navigator.splashscreen.hide) {
+      navigator.splashscreen.hide();
+    }
   };
 
   return pub;

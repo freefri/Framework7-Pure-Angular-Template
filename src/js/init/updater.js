@@ -58,7 +58,9 @@ angular.element(document).ready(function() {
                     var fileHash = NgCvFile.hash(res);
                     var storedHash = localStorage.getItem('hashJsFile');
 
-                    if (storedHash == fileHash) {
+                    var forcePassHash = false;
+                    //forcePassHash = true;// TODO dont commit
+                    if (forcePassHash || storedHash == fileHash) {
                         var js = document.createElement('script');
                         js.type = 'text/javascript';
                         js.src = pathJsFile + nameJsFile;

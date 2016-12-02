@@ -29,7 +29,7 @@ MyApp.angular.factory('PushService', function ($rootScope, CFG) {
     });
 
     push.on('error', function(e) {
-      console.log('push error = ' + e.message);
+      console.error('push error = ' + e.message);
       $rootScope.$broadcast('push:error', e);
     });
 
