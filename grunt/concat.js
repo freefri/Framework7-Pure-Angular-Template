@@ -9,15 +9,15 @@ module.exports = {
             'angular.js',
             'node_modules/node-forge/js/util.js',
             'node_modules/node-forge/js/sha256.js',
-            '<%= pkg.src_js_dir %>/file.js',
-            '<%= pkg.src_js_dir %>/updater.js',
-            '<%= pkg.src_js_dir %>/config-ng.js'
+            '<%= pkg.src_js_dir %>/init/file.js',
+            '<%= pkg.src_js_dir %>/init/updater.js'
         ],
         dest: 'www/dist/init.js',
         nonull: true
     },
     app: {
         src: [
+            '<%= pkg.src_js_dir %>/config-ng.js',
             'node_modules/framework7/dist/js/framework7.min.js',
             'node_modules/angular-translate/dist/angular-translate.min.js',
             '<%= pkg.src_js_dir %>/config-ng.js',
