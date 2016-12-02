@@ -27,7 +27,9 @@
     "grunt-shell": "^2.1.0",
     "grunt-version": "^1.1.1",
     "load-grunt-config": "^0.19.2",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "ng-cordova": "~0.1.27-alpha",
+    "node-forge": "^0.6.45"
   },
   "engines": {
     "node": ">=0.10.0"

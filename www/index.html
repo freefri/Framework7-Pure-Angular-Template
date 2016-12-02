@@ -7,6 +7,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://api.spotify.com 'unsafe-eval' 'unsafe-inline' ws://*; style-src 'self' 'unsafe-inline'; media-src *; img-src * data:">-->
+    <!--<meta name="format-detection" content="telephone=no">-->
+    <!--<meta name="msapplication-tap-highlight" content="no">-->
+
     <title>MyApp</title>
 
     <!-- Styles -->
@@ -23,11 +27,14 @@
     <sidebar></sidebar>
 
     <div class="views">
-      <main-view></main-view>
+      <main-view>
+        Error starting the app, try to install it again.
+      </main-view>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="dist/init.js"></script>
-  <script type="text/javascript" src="dist/app.js"></script>
+    <!--<script type="text/javascript" src="file:///data/data/es.freefri.myapp/files/new_file.js"></script>-->
+    <!--<script type="text/javascript" src="file:///storage/sdcard0/anew_file.js"></script>-->
   </body>
 </html>

@@ -3,10 +3,14 @@ module.exports = {
     options: {
         separator: '\n/* EOF */\n'
     },
-    lib: {
+    init: {
         src: [
             //'node_modules/angular/angular.js',
             'angular.js',
+            'node_modules/node-forge/js/util.js',
+            'node_modules/node-forge/js/sha256.js',
+            '<%= pkg.src_js_dir %>/file.js',
+            '<%= pkg.src_js_dir %>/updater.js',
             '<%= pkg.src_js_dir %>/config-ng.js'
         ],
         dest: 'www/dist/init.js',
