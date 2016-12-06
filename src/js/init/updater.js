@@ -1,5 +1,4 @@
 angular.element(document).ready(function() {
-//document.addEventListener('deviceready', function() {
     var CFG = {
         app: {
             checkUrl: 'app.json',
@@ -16,6 +15,14 @@ angular.element(document).ready(function() {
 
     var pathJsFile;
     var nameJsFile = 'app.js';
+
+    function addScript(src) {
+        var js = document.createElement('script');
+        js.type = 'text/javascript';
+        js.src = src;
+        console.log('Using JS file ' + src);
+        angular.element(document).find('body').append(js);
+    }
 
     function checkUpdater() {
         var lastVersionAndHash = CFG.app.checkUrl;
@@ -61,11 +68,7 @@ angular.element(document).ready(function() {
                     var forcePassHash = false;
                     //forcePassHash = true;// TODO dont commit
                     if (forcePassHash || storedHash == fileHash) {
-                        var js = document.createElement('script');
-                        js.type = 'text/javascript';
-                        js.src = pathJsFile + nameJsFile;
-                        console.log('Using JS file ' + js.src);
-                        angular.element(document).find('body').append(js);
+                        addScript(pathJsFile + nameJsFile);
                     } else {
                         console.error('Different fileHash and storedHash');
                         console.error('hashNew '+fileHash);
@@ -89,5 +92,12 @@ angular.element(document).ready(function() {
             }
         }
     }
-    checkUpdater();
+
+    var url = window.location.toString();
+    var isTestingBrowser = url.indexOf('http://') === 0 || url.indexOf('https://') === 0;
+    if (isTestingBrowser) {
+        addScript('dist/app.js');
+    } else {
+        checkUpdater();
+    }
 });
