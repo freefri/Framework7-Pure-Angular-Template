@@ -2,7 +2,7 @@ var MyApp = {};
 
 MyApp.conf = {
     checkUrl: 'app.json',
-    version: '1.0.2'
+    "version": "1.2.2"
 };
 
 MyApp.angular = angular.module('MyApp', [

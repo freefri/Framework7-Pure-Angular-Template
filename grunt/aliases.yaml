@@ -1,5 +1,7 @@
 default:
   - 'dev'
+  - 'version::patch'
+  - 'shell:hash'
 dev:
   - 'less:dev'
   - 'js'
