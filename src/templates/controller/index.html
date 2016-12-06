@@ -1,16 +1,20 @@
 <div data-page="index" class="page">
-    <!-- Page content-->
-    <div class="page-content">
-        <div class="content-block-title">Last transactions</div>
 
-        <div class="card">
-            <div class="card-header">Big candy</div>
+    <div class="page-content">
+        <div class="content-block-title" ng-show="items.length" translate="INDEX.LAST_ITEMS"></div>
+        <div class="content-block-title" ng-hide="items.length" translate="INDEX.NO_ITEMS"></div>
+
+        <div class="card" ng-repeat="item in items track by item.timestamp">
+            <div class="card-header" ng-bind="item.title"></div>
             <div class="card-content">
-                <div class="card-content-inner">Card with header and footer. Card header is used to display card title and footer for some additional information or for custom actions.</div>
+                <div class="card-content-inner">
+                    <p>Card with header and footer, some usefull information and a link.</p>
+                    Created on {{ item.timestamp | date:'d.M.yy H:mm:ss' }}.
+                    With a price of {{ item.price }}€.</div>
             </div>
             <div class="card-footer">
                 <!--<a href="#" class="link">Like</a>-->
-                <a href="#detailsPage" class="link">Read more</a>
+                <a href="#detailsPage" class="link" translate="INDEX.MORE"></a>
             </div>
         </div>
 
@@ -31,8 +35,8 @@
             </ul>
         </div>
 
-        <a href="#" class="floating-button color-pink">
-            <i class="icon icon-plus"></i>
-        </a>
     </div>
+    <a href="#newPage" class="floating-button color-pink">
+        <i class="icon icon-plus"></i>
+    </a>
 </div>

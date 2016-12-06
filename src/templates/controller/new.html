@@ -1,0 +1,40 @@
+<div data-page="newPage" class="page">
+
+    <div class="page-content smooth">
+
+        <div class="list-block inset">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" translate="NEW.TITLE"></div>
+                            <div class="item-input">
+                                <input type="text" ng-model="item.title"
+                                       placeholder="{{ 'NEW.PH.TITLE' | translate }}">
+                            </div>
+                        </div>
+                        <div class="item-media"><i class="icon"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" translate="NEW.PRICE"></div>
+                            <div class="item-input">
+                                <input type="text" ng-model="item.price"
+                                       placeholder="{{ 'NEW.PH.PRICE' | translate }}">
+                            </div>
+                        </div>
+                        <div class="item-media"><i class="icon icon-euro"></i></div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="content-block">
+            <p><a href="#" class="button button-fill"
+                  ng-click="addNew()" translate="NEW.SUBMIT"></a></p>
+        </div>
+
+    </div>
+</div>
