@@ -1,7 +1,7 @@
 {
   "app": {
-    "version": "1.2.2",
+    "version": "1.2.3",
     "downloadUrl": "dist/",
-    "hash": "c3d0b99a72a0ac2d93c749eb3c7c5d5b14b7c8cee6cb1512eb8b43bd5ad602a1"
+    "hash": "2d7101f2e27e99308c8f2e6df030b1bf23d444949e54161b11c8c853a428e4d6"
   }
 }
