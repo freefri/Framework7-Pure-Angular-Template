@@ -1,4 +1,53 @@
+@root: "../../node_modules/framework7/src/less/material/";
+
 html:not(.ios) {
-  @import url('../../node_modules/framework7/src/less/material/framework7.material.less');
-  @import url('../../node_modules/framework7/src/less/material/framework7.material.colors.less');
+  body {
+    .list-block .item-input {
+      margin-bottom: 0;
+    }
+  }
+
+  @import url('@{root}_mixins.less');
+  @import url('@{root}_colors-vars.less');
+  @import url('@{root}intro.less');
+  @import url('vars.less');
+
+  @import url('f7.custom.colors.less');
+  @import url('@{root}grid.less');
+  @import url('@{root}views.less');
+  @import url('@{root}pages.less');
+  @import url('@{root}toolbars.less');
+  @import url('@{root}toolbars-pages.less');
+  @import url('@{root}searchbar.less');
+  @import url('@{root}messagebar.less');
+  @import url('@{root}icons.less');
+  @import url('@{root}badges.less');
+  @import url('@{root}chips.less');
+  @import url('@{root}content-block.less');
+  @import url('@{root}lists.less');
+  @import url('@{root}contacts.less');
+  @import url('@{root}forms.less');
+  @import url('@{root}floating-button.less');
+  @import url('@{root}accordion.less');
+  @import url('@{root}cards.less');
+  @import url('@{root}modals.less');
+  @import url('@{root}panels.less');
+  @import url('@{root}lazy-load.less');
+  @import url('@{root}tabs.less');
+  @import url('@{root}messages.less');
+  @import url('@{root}statusbar.less');
+  @import url('@{root}preloader.less');
+  @import url('@{root}progressbar.less');
+  @import url('@{root}pull-to-refresh.less');
+  @import url('@{root}infinite-scroll.less');
+  @import url('@{root}autocomplete.less');
+  @import url('@{root}swiper.less');
+  @import url('@{root}photo-browser.less');
+  @import url('@{root}picker.less');
+  @import url('@{root}calendar.less');
+  @import url('@{root}notifications.less');
+  @import url('@{root}login-screen.less');
+  @import url('@{root}ripple.less');
+  @import url('@{root}disabled.less');
+  @import url('@{root}framework7.material.colors.less');
 }
