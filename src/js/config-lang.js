@@ -10,5 +10,5 @@ MyApp.angular.config(function ($translateProvider, LangEn, LangEs) {
         userLang = userLang.split('-')[0];
         return $translateProvider.translations()[userLang] ? userLang : def;
     }
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage(getUserLang());
 });
