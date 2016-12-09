@@ -28,6 +28,7 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService) {
       animateNavBackIcon: true
     });
     fw7.views.push(fw7.app.addView('.view-main', fw7.options));
+    $rootScope.$broadcast('f7:mainInit');
     
     for (i = 0; i < eventListeners.ready.length; i = i + 1) {
       eventListeners.ready[i]();
