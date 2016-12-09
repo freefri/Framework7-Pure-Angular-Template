@@ -22,6 +22,7 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService) {
       material: false,//!MyApp.config.isIos
       template7Pages: false,
       swipePanel: 'left',
+      swipePanelNoFollow: true,
       swipePanelActiveArea: '30',
       swipeBackPage: true,
       pushState: false,
