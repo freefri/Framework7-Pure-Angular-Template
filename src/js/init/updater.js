@@ -88,6 +88,8 @@ angular.element(document).ready(function() {
                     fn();
                 });
             } else {
+                console.log('Ready very fast');
+                pathJsFile = cordova.file.dataDirectory;
                 fn();
             }
         }
