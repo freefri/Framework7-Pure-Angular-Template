@@ -42,7 +42,9 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService) {
     ];
     pageEvents.forEach(function (event) {
       Dom7(document).on(event, function (e) {
-        $rootScope.$broadcast('f7:'+event, e);
+        $rootScope.$apply(function () {
+          $rootScope.$broadcast('f7:'+event, e);
+        });
       });
     });
   }

@@ -1,6 +1,6 @@
 /*jslint browser: true*/
 /*global console, MyApp*/
-MyApp.angular.directive('newPageController', function ($rootScope, Router, ItemsService) {
+MyApp.angular.directive('newPageController', function (StateParams, Router, ItemsService) {
   return {
     restrict: 'E',
     replace: true,
@@ -13,12 +13,8 @@ MyApp.angular.directive('newPageController', function ($rootScope, Router, Items
         });
       };
 
-      $rootScope.$on('f7:pageReinit', function (e, param) {
-        $scope.$apply(function () {
-          if (param.detail.page.name == 'newPage') {
-            $scope.item = {};
-          }
-        });
+      StateParams.get('newPage', function () {
+        $scope.item = {};
       });
     }
   };

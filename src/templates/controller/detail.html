@@ -1,4 +1,4 @@
-<div data-page="detailsPage" class="page cached">
+<div data-page="detailPage" class="page cached">
     <div class="page-content">
         <div class="list-block media-list">
             <ul>
@@ -7,10 +7,11 @@
                         <div class="item-inner">
                             <div class="item-title-row">
                                 <div class="item-title" ng-bind="item.title"></div>
-                                <div class="item-after" ng-bind="item.after"></div>
+                                <div class="item-after" ng-bind="item.after  | date:'dd-MM-yy H:mm'"></div>
                             </div>
                             <div class="item-subtitle">New messages from John Doe</div>
-                            <div class="item-text">Lorem ipsum dolor sit amet...</div>
+                            <div class="item-text" ng-hide="item.text">Lorem ipsum dolor sit amet...</div>
+                            <div class="item-text" ng-show="item.text" ng-bind="item.text"></div>
                         </div>
                     </a>
                 </li>

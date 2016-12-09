@@ -1,26 +1,29 @@
 /*jslint browser: true*/
 /*global console, MyApp*/
-MyApp.angular.directive('detailPageController', function () {
+MyApp.angular.directive('detailPageController', function (StateParams) {
   return {
     restrict: 'E',
     replace: true,
     scope: true,
-    templateUrl: 'src/templates/controller/details.html',
+    templateUrl: 'src/templates/controller/detail.html',
     controller: function ($scope) {
-      $scope.items = [
-        {
-          after: '24-10-2016 11:25',
-          title: 'First step'
-        },
-        {
-          after: '24-10-2016 11:40',
-          title: 'Second step'
-        },
-        {
-          after: '25-10-2016 12:40',
-          title: 'Third step'
-        }
-      ];
+      StateParams.get('detailPage', function (params) {
+        $scope.items = [
+          {
+            after: params.timestamp,
+            title: 'First step of ' + params.title,
+            text: 'Paid ' + params.price + '€'
+          },
+          {
+            after: params.timestamp + 15 * 60 * 1000,
+            title: 'Second step'
+          },
+          {
+            after: params.timestamp + 30 * 60 * 1000,
+            title: 'Third step'
+          }
+        ];
+      });
     }
   };
 });

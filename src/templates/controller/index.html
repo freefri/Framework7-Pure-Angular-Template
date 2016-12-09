@@ -15,12 +15,12 @@
             <div class="card-content">
                 <div class="card-content-inner">
                     <p>Card with header and footer, some usefull information and a link.</p>
-                    Created on {{ item.timestamp | date:'d.M.yy H:mm:ss' }}.
+                    Created on {{ item.timestamp | date:'dd-MM-yy H:mm:ss' }}.
                     With a price of {{ item.price }}€.</div>
             </div>
             <div class="card-footer">
                 <!--<a href="#" class="link">Like</a>-->
-                <a href="#detailsPage" class="link" translate="INDEX.MORE"></a>
+                <a href="#detailPage" state-params="{{ item }}" class="link" translate="INDEX.MORE"></a>
             </div>
         </div>
 
