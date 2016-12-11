@@ -4,7 +4,7 @@ module.exports = {
             prefix: '"version"\\s*:\\s*"'
         },
         src: [
-            'src/js/config-ng.js',
+            '<%= pkg.src_dir %>/js/config-ng.js',
             'package.json',
             'www/app.json'
         ]

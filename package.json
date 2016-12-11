@@ -7,7 +7,7 @@
     "url": "https://github.com/freefri/cordova-ngF7-container.git"
   },
   "description": "A cordova container project using Framework7 and Angular JS",
-  "src_js_dir": "src/js",
+  "src_dir": "src",
   "dependencies": {
     "angular": "~1.5.9",
     "angular-translate": "^2.13.0",

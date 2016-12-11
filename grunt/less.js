@@ -3,15 +3,15 @@ module.exports = {
         options: {
         },
         files: {
-            'www/dist/f7.material.css': 'src/styles/f7.material.less',
-            'www/dist/f7.ios.css': 'src/styles/f7.ios.less'
+            'www/dist/f7.material.css': '<%= pkg.src_dir %>/styles/f7.material.less',
+            'www/dist/f7.ios.css': '<%= pkg.src_dir %>/styles/f7.ios.less'
         }
     },
     prd: {
         options: {
         },
         files: {
-            'www/dist/f7.css': 'src/styles/f7.less'
+            'www/dist/f7.css': '<%= pkg.src_dir %>/styles/f7.less'
         }
     }
 };
