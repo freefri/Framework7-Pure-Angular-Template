@@ -8,7 +8,6 @@
   },
   "description": "A cordova container project using Framework7 and Angular JS",
   "src_dir": "src",
-  "style_dir": "src/styles",
   "dist_dir": "www/dist",
   "dependencies": {
     "angular": "~1.5.9",
