@@ -6,13 +6,13 @@ module.exports = {
     init: {
         src: [
             //'node_modules/angular/angular.js',
-            'angular.js',
+            '<%= pkg.src_dir %>/../angular.js',
             'node_modules/node-forge/js/util.js',
             'node_modules/node-forge/js/sha256.js',
             '<%= pkg.src_dir %>/js/init/file.js',
             '<%= pkg.src_dir %>/js/init/updater.js'
         ],
-        dest: 'www/dist/init.js',
+        dest: '<%= pkg.dist_dir %>/init.js',
         nonull: true
     },
     app: {
@@ -30,7 +30,7 @@ module.exports = {
             '<%= pkg.src_dir %>/js/bootstrap-ng.js',
             '<%= pkg.src_dir %>/js/config-f7.js'
         ],
-        dest: 'www/dist/app.js',
+        dest: '<%= pkg.dist_dir %>/app.js',
         nonull: true
     }
 };

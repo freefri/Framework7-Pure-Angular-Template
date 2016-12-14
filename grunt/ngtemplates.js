@@ -1,6 +1,9 @@
 module.exports = {
     html: {
-        options:      {
+        options: {
+            url:  function(url) {
+                return url.replace(/^.*src\/templates/i, 'src/templates');
+            },
             bootstrap:  function(module, script) {
                 return 'MyApp.angular.run(function($templateCache) { ' + script + ' });';
             }
