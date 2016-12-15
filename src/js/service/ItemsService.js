@@ -28,7 +28,8 @@ MyApp.angular.factory('ItemsService', function ($q, $timeout) {
         q.resolve('ok');
       } else {
         item.errors = {
-          title: {_required: 'Mandatory'}
+          title: {_required: 'Mandatory'},
+          price: {_required: 'Mandatory'}
         };
         q.reject('validation errors');
       }

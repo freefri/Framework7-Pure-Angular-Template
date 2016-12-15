@@ -1,6 +1,7 @@
 MyApp.angular.directive('error', function ($compile) {
     return {
         restrict: 'A',
+        scope: true,
         compile: function errorCompile(templateElement) {
             $compile.$$addBindingClass(templateElement);
             return function errorLink(scope, element, attr) {
