@@ -1,4 +1,4 @@
-MyApp.angular.factory('Router', function () {
+MyApp.angular.factory('Router', function ($timeout) {
   'use strict';
 
   var pub = {};
@@ -11,8 +11,10 @@ MyApp.angular.factory('Router', function () {
   };
 
   pub.back = function(opt) {
-    var mainView = fw7.views[0];
-    mainView.router.back(opt);
+    $timeout(function () {
+      var mainView = fw7.views[0];
+      mainView.router.back(opt);
+    });
   };
 
   return pub;
