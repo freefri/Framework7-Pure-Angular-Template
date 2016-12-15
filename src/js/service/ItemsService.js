@@ -21,9 +21,17 @@ MyApp.angular.factory('ItemsService', function ($q, $timeout) {
     var q = $q.defer();
     item.timestamp = Date.now();
     $timeout(function () {
-      collection.push(item);
-      localStorage.setItem(storeKey, JSON.stringify(collection));
-      q.resolve('ok');
+      if (item.title) {
+        item.errors = {};
+        collection.push(item);
+        localStorage.setItem(storeKey, JSON.stringify(collection));
+        q.resolve('ok');
+      } else {
+        item.errors = {
+          title: {_required: 'Mandatory'}
+        };
+        q.reject('validation errors');
+      }
     }, 222);
     return q.promise;
   };
