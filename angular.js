@@ -16630,6 +16630,7 @@
                 var toCheck = checkQueue.shift();
                 if (!toCheck.pur) {
                     toCheck.pur = true;
+                    console.log('Possibly unhandled rejection:', toCheck.value);
                     var errorMessage = 'Possibly unhandled rejection: ' + toDebugString(toCheck.value);
                     exceptionHandler(errorMessage);
                 }
