@@ -25,6 +25,7 @@ module.exports = {
             'tmp/built-templates.js',
             '<%= pkg.src_dir %>/js/config-lang.js',
             '<%= pkg.src_dir %>/js/service/*.js',
+            '<%= pkg.src_dir %>/js/lang/*.js',
             '<%= pkg.src_dir %>/js/directive/*.js',
             '<%= pkg.src_dir %>/js/controller/*.js',
             '<%= pkg.src_dir %>/js/bootstrap-ng.js',
