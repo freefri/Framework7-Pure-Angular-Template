@@ -7,6 +7,14 @@ MyApp.angular.directive('newPageController', function (StateParams, Router, Item
     scope: true,
     templateUrl: 'src/templates/controller/new.html',
     controller: function ($scope) {
+
+      var maxDate = new Date();
+      maxDate.setMonth(maxDate.getMonth() + 1);
+      $scope.calendar = {
+        minDate: new Date(),
+        maxDate: maxDate
+      };
+
       $scope.addNew = function () {
         ItemsService.add($scope.item).then(function () {
           Router.back();

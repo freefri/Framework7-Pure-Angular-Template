@@ -19,6 +19,17 @@
                 <li>
                     <div class="item-content">
                         <div class="item-inner">
+                            <div class="item-title label">Date</div>
+                            <div class="item-input">
+                                <input calendar="calendar" type="text"
+                                       ng-model="item.future" placeholder="YYYY-MM-DD">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
                             <div class="item-title label" translate="NEW.PRICE"></div>
                             <div class="item-input">
                                 <input error type="number" step="0.01" min="1"
