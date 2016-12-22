@@ -4,7 +4,6 @@ MyApp.angular.directive('stateParams', function (StateParams) {
         replace: false,
         link: function($scope, $element, $attrs) {
             $element.on('click', function (e) {
-                console.log('$attrs.href', e);
                 var params = $scope.$eval($attrs.stateParams);
                 var targetPage = $attrs.href;
                 if (targetPage.charAt(0) == '#') {
