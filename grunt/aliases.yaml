@@ -1,4 +1,5 @@
 default:
+  - 'copy'
   - 'dev'
   - 'version::patch'
   - 'shell:hash'

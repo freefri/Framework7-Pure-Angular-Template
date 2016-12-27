@@ -1,0 +1,66 @@
+.list-block.media-list.icon-list {
+
+  .icon-connector {
+    display: table;
+    width: 100%;
+
+    > * {
+      z-index: auto;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 39px;
+      width: 3px;
+      background-color: @gray;
+      z-index: 0;
+    }
+  }
+
+  .fa {
+    padding: 0 3px;
+    width: 16px;
+
+    &.fa-ban:after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 27px;
+      background: white;
+      left: 26px;
+      top: 14px;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+
+  .item-media {
+    display: table-cell;
+    vertical-align: middle;
+
+    z-index: 1;
+    position: relative;
+
+    background-color: @gray;
+    color: white;
+    border-radius: 50%;
+    padding: 13px;
+
+    &.color-green {
+      background-color: @green;
+    }
+    &.color-red {
+      background-color: @red;
+    }
+    &.color-orange {
+      background-color: @orange;
+    }
+    &.color-lightblue {
+      background-color: @lightblue;
+    }
+  }
+}

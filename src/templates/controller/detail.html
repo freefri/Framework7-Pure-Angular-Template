@@ -1,9 +1,12 @@
 <div data-page="detailPage" class="page cached">
-    <div class="page-content">
-        <div class="list-block media-list">
+    <div class="page-content smooth">
+        <div class="list-block media-list icon-list">
             <ul>
-                <li ng-repeat="item in items">
-                    <a href="#" class="item-link item-content">
+                <li ng-repeat="item in items" class="icon-connector">
+                    <a href="#" class="item-link item-content media-list">
+                        <div class="item-media" ng-class="item.color">
+                            <i class="fa" ng-class="item.icon"></i>
+                        </div>
                         <div class="item-inner">
                             <div class="item-title-row">
                                 <div class="item-title" ng-bind="item.title"></div>
