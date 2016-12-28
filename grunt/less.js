@@ -9,9 +9,10 @@ module.exports = {
     },
     prd: {
         options: {
+            compress: true
         },
         files: {
-            '<%= pkg.dist_dir %>/f7.css': 'src/styles/f7.less'
+            '<%= pkg.dist_dir %>/f7.min.css': 'src/styles/f7.less'
         }
     }
 };

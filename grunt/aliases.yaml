@@ -1,6 +1,9 @@
 default:
-  - 'copy'
   - 'dev'
+  - 'predeploy'
+
+predeploy:
+  - 'copy'
   - 'version::patch'
   - 'shell:hash'
 dev:
@@ -10,3 +13,13 @@ js:
   - 'ngtemplates'
   - 'jshint'
   - 'concat'
+
+dist:
+  - 'less:prd'
+  - 'js'
+
+deploy:
+  - 'dist'
+  - 'predeploy'
+  - 'compress'
+  - 'aws_s3'

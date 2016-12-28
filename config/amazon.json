@@ -1,0 +1,8 @@
+{
+  "S3" : {
+    "key"      : "SOMEKEY",
+    "secret"   : "SOME/LONG-IAM_SECRET",
+    "region"   : "eu-west-1",
+    "bucketpub": "ngF7-public"
+  }
+}
