@@ -96,9 +96,10 @@ angular.element(document).ready(function() {
     }
 
     var url = window.location.toString();
-    var isTestingBrowser = url.indexOf('http://') === 0 || url.indexOf('https://') === 0;
-    if (isTestingBrowser) {
-        addScript('dist/app.js');
+    var isDev = url.indexOf('http://') === 0;
+    var isBrowser = url.indexOf('https://') === 0;
+    if (isDev || isBrowser) {
+        //addScript('dist/app.js');
     } else {
         checkUpdater();
     }
