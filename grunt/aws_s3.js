@@ -12,8 +12,10 @@ module.exports = {
         }
     },
     prd: {
-        params: {
-            ContentEncoding: 'gzip'
+        options: {
+            params: {
+                ContentEncoding: 'gzip'
+            }
         },
         files: [
             {
