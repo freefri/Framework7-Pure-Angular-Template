@@ -1,7 +1,7 @@
 .list-block.media-list.icon-list {
 
   .icon-connector {
-    display: table;
+    display: block;
     width: 100%;
 
     > * {
@@ -61,6 +61,16 @@
     }
     &.color-lightblue {
       background-color: @lightblue;
+    }
+  }
+
+  .item-open {
+    .item-title, .item-subtitle, .item-text {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      height: auto;
+      max-height: none;
     }
   }
 }
