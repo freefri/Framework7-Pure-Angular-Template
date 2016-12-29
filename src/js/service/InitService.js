@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 /*global console, Framework7, MyApp, $document*/
 
-MyApp.angular.factory('InitService', function ($rootScope, PushService) {
+MyApp.angular.factory('InitService', function ($rootScope, PushService, Router) {
   'use strict';
 
   var pub = {},
@@ -30,7 +30,7 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService) {
     });
     fw7.views.push(fw7.app.addView('.view-main', fw7.options));
     $rootScope.$broadcast('f7:mainInit');
-    
+
     for (i = 0; i < eventListeners.ready.length; i = i + 1) {
       eventListeners.ready[i]();
     }
@@ -40,8 +40,23 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService) {
       'pageBeforeAnimation', 'pageAfterAnimation', 'pageBeforeRemove',
       'pageBack', 'pageAfterBack'
     ];
+    var currentHash;
+    window.addEventListener('popstate', function(e){
+      var t = e.currentTarget;
+      var h = '#' + currentHash;
+      if (currentHash && h != t.location.hash) {
+        history.pushState({}, t.document.title +h, h);
+        Router.back();
+      }
+    });
     pageEvents.forEach(function (event) {
       Dom7(document).on(event, function (e) {
+        if (['pageReinit', 'pageInit'].indexOf(event) !== -1) {
+          currentHash = Dom7(e.target).data('page');
+          if (currentHash) {
+            location.hash = currentHash;
+          }
+        }
         $rootScope.$apply(function () {
           $rootScope.$broadcast('f7:'+event, e);
         });
