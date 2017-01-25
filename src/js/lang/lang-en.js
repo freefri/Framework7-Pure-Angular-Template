@@ -18,7 +18,7 @@ MyApp.angular.constant('LangEn', {
   AUTH: {
     ERROR: "Invalid credentials",
     EMAIL: "Email",
-    PASSWORD: "Passwort",
+    PASSWORD: 'Password',
     FORGOT_PASS: "Forgot password?",
     LOGIN: "Log in",
     SIGNUP: "Signup"
