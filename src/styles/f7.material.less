@@ -8,6 +8,17 @@ html:not(.ios) {
     .actions-modal {
       margin-left: 0;
     }
+    .navbar-inner.visible {
+      overflow: visible;
+      .button {
+        color: #fff;
+        height: 45px;
+        &.active {
+          border-radius: 0;
+          border-bottom: 3px solid rgba(255,255,255,0.5);
+        }
+      }
+    }
   }
 
   @import url('@{root}_mixins.less');
