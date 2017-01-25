@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 /*global console, Framework7, MyApp, $document*/
 
-MyApp.angular.factory('InitService', function ($rootScope, PushService, Router) {
+MyApp.angular.factory('InitService', function ($rootScope, $timeout, PushService, Router) {
   'use strict';
 
   var pub = {},
@@ -57,8 +57,10 @@ MyApp.angular.factory('InitService', function ($rootScope, PushService, Router) 
             location.hash = currentHash;
           }
         }
-        $rootScope.$apply(function () {
-          $rootScope.$broadcast('f7:'+event, e);
+        $timeout(function () {
+          $rootScope.$apply(function () {
+            $rootScope.$broadcast('f7:'+event, e);
+          });
         });
       });
     });
