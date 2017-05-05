@@ -1,0 +1,39 @@
+@desktop: 1396px;
+@vertical-margin: 19px;
+@media (min-width: @desktop) {
+
+  html:not(.unimportant) {
+    background-color: #e5ffe5;;
+
+    body {
+      border-radius: 2px;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.3);
+      margin: @vertical-margin auto !important;
+      max-width: @desktop;
+      max-height: calc(~'100% - '@vertical-margin*2);
+
+      .navbar a.link.open-panel {
+        display: none;
+      }
+
+      .navbar-fixed .block-menu {
+        height: calc(~'100% - 56px');
+        margin-top: -16px;
+
+      }
+      .block-menu {
+        border-right: 1px solid #ccc;
+      }
+
+      .panel.panel-left.panel-cover.desktop-open {
+        display: block;
+        width: 25%;
+        transform: translate3d(260px, 0, 0);
+      }
+
+      .views {
+        margin-left: 25%;
+      }
+    }
+  }
+}
