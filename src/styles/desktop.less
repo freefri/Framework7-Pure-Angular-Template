@@ -7,11 +7,13 @@
 
     body {
       border-radius: 2px;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.3);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.3);
       margin: @vertical-margin auto !important;
       max-width: @desktop;
-      max-height: calc(~'100% - '@vertical-margin*2);
+      max-height: calc(~'100% - '@vertical-margin * 2);
+    }
 
+    body.panel-open-desktop {
       .navbar a.link.open-panel {
         display: none;
       }
@@ -25,7 +27,7 @@
         border-right: 1px solid #ccc;
       }
 
-      .panel.panel-left.panel-cover.desktop-open {
+      .panel.panel-left.panel-cover {
         display: block;
         width: 25%;
         transform: translate3d(260px, 0, 0);
