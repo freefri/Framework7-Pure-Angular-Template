@@ -19,7 +19,7 @@ MyApp.angular.factory('StateParams', function ($rootScope) {
 
   StateParams.get = function (pageName, fn) {
     var getCurrentParams = function (e, param) {
-      if (param.detail.page.name == pageName) {
+      if (param.detail.page.name == pageName || pageName == '*') {
         fn(paramList[currentPage]);
       }
     };
