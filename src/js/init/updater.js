@@ -99,7 +99,7 @@ angular.element(document).ready(function() {
     var isDev = url.indexOf('http://') === 0;
     var isBrowser = url.indexOf('https://') === 0;
     if (isDev || isBrowser) {
-        var isTestingDev = url.indexOf('/index.html') !== -1;
+        var isTestingDev = url.indexOf('/index.html') !== -1 || url.indexOf('://dev.') !== -1;
         if (isTestingDev) {
             addScript('dist/app.js');
         }
